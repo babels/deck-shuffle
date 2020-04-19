@@ -18,7 +18,7 @@ function deal() {
     }
   }
 
-  function retCard( card, dx ) {
+  function retCard( card ) {
     /* identifies paint and returns actual card by relative index */
 
     if( dx == (mod -1) ) st = st +1;		  // 1 - 4 suits
@@ -47,7 +47,7 @@ function deal() {
     var dx  =  index % mod;							  // gives us 1-13 per suit
       suit  =  suits[st];									// magic
 
-    var card = retCard( card, dx );						// cards are cool
+    var card = retCard( card );						// cards are cool
 
 
    // console.log("card index " + index  + " dx "  + card + " suit " + suit);
