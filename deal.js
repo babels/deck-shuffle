@@ -9,7 +9,7 @@ function deal() {
     }
 
 /* Randomize array in-place using Durstenfeld shuffle algorithm */
- function shuffleArray(array) {
+ function shuffleArray( array ) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
         var temp = array[i];
@@ -18,7 +18,7 @@ function deal() {
     }
   }
 
-  function retCard( card) {
+  function retCard( card, dx ) {
     /* identifies paint and returns actual card by relative index */
 
     if( dx == (mod -1) ) st = st +1;		  // 1 - 4 suits
@@ -47,7 +47,7 @@ function deal() {
     var dx  =  index % mod;							  // gives us 1-13 per suit
       suit  =  suits[st];									// magic
 
-    var card = retCard( card );						// cards are cool
+    var card = retCard( card, dx );						// cards are cool
 
 
    // console.log("card index " + index  + " dx "  + card + " suit " + suit);
